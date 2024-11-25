@@ -65,11 +65,11 @@ go run main.go
 
 * GET /hair
     * Query parameters: `eyes, ears,` and `mouth`.
-    * If all present, returns "`"black hair"`
+    * If all present, returns `"black hair"`
     * If any missing, responds with `400 Bad Request`
 * GET /voice
     * Query parameters: `nose` and `hair`.
-    * If all present, returns "`"big voice"`
+    * If all present, returns `"big voice"`
     * If any missing, responds with `400 Bad Request`
 
 ### 4. Start the Workflow
