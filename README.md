@@ -29,6 +29,8 @@ Run the Temporal server:
 temporal server start-dev
 ```
 
+---
+
 ### 2. Run the Worker
 
 The worker is located in the `worker` directory. It is ready to execute workflows when started.
@@ -44,6 +46,8 @@ cd worker
 ```bash
 go run main.go
 ```
+
+---
 
 ### 3. Run the Microservice
 
@@ -72,6 +76,8 @@ go run main.go
     * If all present, returns `"big voice"`
     * If any missing, responds with `400 Bad Request`
 
+---
+
 ### 4. Start the Workflow
 
 1. Ensures you have the input JSON file in the root directory. Example `input.json`:
@@ -95,11 +101,15 @@ temporal workflow start --type WorkflowOne --task-queue workflow-face --workflow
 * `workflow-face-id`: The ID for this workflow instance.
 * `WorkflowOne`: The name of the workflow to execute
 
+---
+
 #### Project Structure
 
 * `worker`: Contains the worker code ready to execute workflows.
 * `microservice`: Contains the HTTP microservice.
 * `input.json`: Example JSON input file for the workflow.
+
+---
 
 #### Notes
 
