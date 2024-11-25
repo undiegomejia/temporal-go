@@ -32,7 +32,7 @@ docker run --name temporalio --rm -d -p 7233:7233 temporalio/auto-setup
 
 ### 2. Run the Worker
 
-The worker is located in the `worker` directory. It is ready to execute wokrflows when started.
+The worker is located in the `worker` directory. It is ready to execute workflows when started.
 
 1. Navigate to the `worker` directory:
 
@@ -56,7 +56,7 @@ The microservice is located in the `microservice` directory. It provides two HTT
 cd ../microservice
 ```
 
-2. Start hte microservice by running hte `main.go` file:
+2. Start the microservice by running the `main.go` file:
 
 ```bash
 go run main.go
@@ -75,7 +75,7 @@ go run main.go
 
 ### 4. Start the Workflow
 
-1. Ensures you have hte input JSON file in the root directory. Example `input.json`:
+1. Ensures you have the input JSON file in the root directory. Example `input.json`:
 
 ```json
 {
@@ -94,7 +94,7 @@ temporal workflow start --type WorkflowOne --task-queue workflow-face --workflow
 
     * `workflow-face`: Task queue name for the worker.
     * `workflow-face-id`: The ID for this workflow instance.
-    *`WorkflowOne`: The name of the workflow to execute
+    * `WorkflowOne`: The name of the workflow to execute
 
 #### Project Structure
 
