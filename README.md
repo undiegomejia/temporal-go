@@ -65,13 +65,13 @@ go run main.go
 #### Microservice Endopints
 
 * GET /hair
-- Query parameters: `eyes, ears,` and `mouth`.
-- If all present, returns "`"black hair"`
-- If any missing, responds with `400 Bad Request`
+ * Query parameters: `eyes, ears,` and `mouth`.
+ * If all present, returns "`"black hair"`
+ * If any missing, responds with `400 Bad Request`
 * GET /voice
-- Query parameters: `nose` and `hair`.
-- If all present, returns "`"big voice"`
-- If any missing, responds with `400 Bad Request`
+ * Query parameters: `nose` and `hair`.
+ * If all present, returns "`"big voice"`
+ * If any missing, responds with `400 Bad Request`
 
 ### 4. Start the Workflow
 
@@ -92,9 +92,9 @@ go run main.go
 temporal workflow start --type WorkflowOne --task-queue workflow-face --workflow-id workflow-face-id --input-file '../input.json'
 ```
 
-- `workflow-face`: Task queue name for the worker.
-- `workflow-face-id`: The ID for this workflow instance.
-- `WorkflowOne`: The name of the workflow to execute
+ * `workflow-face`: Task queue name for the worker.
+ * `workflow-face-id`: The ID for this workflow instance.
+ *`WorkflowOne`: The name of the workflow to execute
 
 #### Project Structure
 
