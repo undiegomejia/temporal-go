@@ -85,10 +85,10 @@ go run main.go
 }
 ```
 
-2. Start the workflow using the Temporal CLI:
+2. In the root directory start the workflow using the Temporal CLI:
 
 ```bash
-temporal workflow start --type WorkflowOne --task-queue workflow-face --workflow-id workflow-face-id --input-file '../input.json'
+temporal workflow start --type WorkflowOne --task-queue workflow-face --workflow-id workflow-face-id --input-file 'input.json'
 ```
 
     * `workflow-face`: Task queue name for the worker.
