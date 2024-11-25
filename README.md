@@ -91,9 +91,9 @@ go run main.go
 temporal workflow start --type WorkflowOne --task-queue workflow-face --workflow-id workflow-face-id --input-file 'input.json'
 ```
 
-    * `workflow-face`: Task queue name for the worker.
-    * `workflow-face-id`: The ID for this workflow instance.
-    * `WorkflowOne`: The name of the workflow to execute
+* `workflow-face`: Task queue name for the worker.
+* `workflow-face-id`: The ID for this workflow instance.
+* `WorkflowOne`: The name of the workflow to execute
 
 #### Project Structure
 
