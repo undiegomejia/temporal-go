@@ -14,7 +14,6 @@ The project includes:
 
 Ensure you have the following installed:  
 
-- [Docker](https://www.docker.com/) (to run the Temporal server).  
 - [Go](https://go.dev/) (for building and running the worker and microservice).  
 - [Temporal CLI](https://docs.temporal.io/cli) (to interact with Temporal).  
 
@@ -24,10 +23,10 @@ Ensure you have the following installed:
 
 ### 1. Start the Temporal Server  
 
-Run the Temporal server using Docker:  
+Run the Temporal server:  
 
 ```bash
-docker run --name temporalio --rm -d -p 7233:7233 temporalio/auto-setup
+temporal server start-dev
 ```
 
 ### 2. Run the Worker
