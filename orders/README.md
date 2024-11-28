@@ -1,4 +1,4 @@
-# A Order Workflow with Temporal.io  
+# OrderWorkflow with Parallel Activities in Temporal.io  
 
 This project demonstrates a simple project using Temporal.io to run a workflow that processes a product order and integrates with a microservice.  
 
