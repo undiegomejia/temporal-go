@@ -33,7 +33,7 @@ func OrderProcessingWorkflow(ctx workflow.Context, order OrderDetails) (OrderDet
 	// Parallel Activities: PrepareShipment and GenerateInvoice
 	prepareShipmentFuture := workflow.ExecuteActivity(ctx, PrepareShipping, order)
 	generateInvoiceFuture := workflow.ExecuteActivity(ctx, GenerateInvoice, order)
-	// Wiat prepare shipping to finish
+	// Wait prepare shipping to finish
 	err = prepareShipmentFuture.Get(ctx, nil)
 	if err != nil {
 		return order, err
