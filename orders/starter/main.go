@@ -3,25 +3,31 @@ package main
 import (
 	"context"
 	"log"
-	"os"
-	workflow "temporal-go"
+	orders "temporal-go/orders"
 
+	"github.com/google/uuid"
 	"go.temporal.io/sdk/client"
 )
 
 func main() {
 	c, err := client.Dial(client.Options{})
 	if err != nil {
-		log.Fatalln("Unable to create face", err)
+		log.Fatalln("Unable to create order", err)
 	}
 	defer c.Close()
 
 	options := client.StartWorkflowOptions{
-		ID:        "workflow-face-id",
-		TaskQueue: "workflow-face",
+		ID:        "order_" + uuid.NewString(),
+		TaskQueue: "order",
 	}
 
-	we, err := c.ExecuteWorkflow(context.Background(), options, workflow.WorkflowOne, os.Args[1])
+	we, err := c.ExecuteWorkflow(context.Background(), options, orders.OrderProcessingWorkflow, orders.OrderDetails{
+		OrderID:         "78787",
+		CustomerID:      "cust-89898",
+		ProductDetails:  "Laptop",
+		Quantity:        1,
+		ShippingAddress: "123 Print St. San Jose",
+	})
 	if err != nil {
 		log.Fatalln("Unable to execute workflow", err)
 	}
