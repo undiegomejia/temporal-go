@@ -1,4 +1,4 @@
-# A "Face Builder" Basic Workflow with Temporal.io  
+# A "Facial Features" Workflow with Temporal.io  
 
 This project demonstrates a simple project using Temporal.io to run a workflow that processes facial features and integrates with a microservice.  
 
