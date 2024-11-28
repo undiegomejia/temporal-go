@@ -6,6 +6,7 @@ type OrderDetails struct {
 	ProductDetails  string `json:"productDetails"`
 	Quantity        int    `json:"quantity"`
 	ShippingAddress string `json:"shippingAddress"`
+	InvoiceId       string `json:"invoiceId"`
 }
 
 // type (

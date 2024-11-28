@@ -32,7 +32,6 @@ func OrderProcessingWorkflow(ctx workflow.Context, order OrderDetails) (OrderDet
 	}
 	// Parallel Activities: PrepareShipment and GenerateInvoice
 	prepareShipmentFuture := workflow.ExecuteActivity(ctx, PrepareShipping, order)
-	var invoiceId string
 	generateInvoiceFuture := workflow.ExecuteActivity(ctx, GenerateInvoice, order)
 	// Wiat prepare shipping to finish
 	err = prepareShipmentFuture.Get(ctx, nil)
@@ -40,12 +39,12 @@ func OrderProcessingWorkflow(ctx workflow.Context, order OrderDetails) (OrderDet
 		return order, err
 	}
 	// Wait generate invoice to finish
-	err = generateInvoiceFuture.Get(ctx, &invoiceId)
+	err = generateInvoiceFuture.Get(ctx, &order.InvoiceId)
 	if err != nil {
 		return order, err
 	}
 	// Notify Shipment (Sequential)
-	err = workflow.ExecuteActivity(ctx, NotifyShipment, order, invoiceId).Get(ctx, nil)
+	err = workflow.ExecuteActivity(ctx, NotifyShipment, order).Get(ctx, nil)
 	if err != nil {
 		return order, err
 	}

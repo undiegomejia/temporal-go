@@ -40,7 +40,7 @@ func GenerateInvoice(ctx context.Context, order OrderDetails) (string, error) {
 }
 
 func NotifyShipment(ctx context.Context, order OrderDetails, invoiceId string) error {
-	err := notifyShipmentService("notify-shipment", order.OrderID, invoiceId)
+	err := notifyShipmentService("notify-shipment", order.OrderID, order.InvoiceId)
 	if err != nil {
 		return err
 	}
