@@ -1,4 +1,4 @@
-# Different Workflow uses with Temporal.io  
+# Different Workflows case uses with Temporal.io  
 
 This project demonstrates several ways to display workflows using Temporal.io with it's Go SDK
 
