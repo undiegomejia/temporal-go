@@ -23,7 +23,7 @@ func OrderProcessingWorkflow(ctx workflow.Context, order OrderDetails) (OrderDet
 	}
 	if !inventoryAvailable {
 		fmt.Printf("Order %s cannot be fulfilled due to lack of inventory.\n", order.OrderID)
-		return order, nil
+		return order, fmt.Errorf("order %s cannot be fulfilled due to lack of inventory", order.OrderID)
 	}
 	// Send Confirmation (Sequencial)
 	err = workflow.ExecuteActivity(ctx, SendConfirmation, order).Get(ctx, nil)
