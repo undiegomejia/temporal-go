@@ -1,6 +1,6 @@
-# Different Workflows case uses with Temporal.io  
+`(!)` This repo was possible thanks to the efforts of the Temporal.io Github Team who created an amazing guide in [Temporal Samples Go](https://github.com/temporalio/samples-go).
 
-`(!)` This was possible thanks to the efforts of the Temporal.io Github Team [Temporal Samples Go](https://github.com/temporalio/samples-go). Thanks.
+# Different Workflows case uses with Temporal.io  
 
 This project demonstrates several ways to display workflows using Temporal.io with Go SDK
 
