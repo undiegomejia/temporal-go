@@ -15,7 +15,7 @@ func DSLWorkflow(ctx workflow.Context, dslWorkflow Workflow) (map[string]string,
 	ao := workflow.ActivityOptions{
 		ScheduleToCloseTimeout: time.Hour * 2,
 		StartToCloseTimeout:    time.Hour * 600,
-		HeartbeatTimeout:       time.Hour,
+		HeartbeatTimeout:       time.Second * 30,
 	}
 
 	ctx = workflow.WithActivityOptions(ctx, ao)

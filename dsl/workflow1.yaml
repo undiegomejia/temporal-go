@@ -1,6 +1,6 @@
 variables:
-  orderId:         bdc6r-obk0it-ahy8t-pah56l
-  customerId:      cust-89898
+  orderId:         order-poc6r-dki80t-kot8t-tju56
+  customerId:      cust-bdc6r-odk0it-ahj8t-pwh56
   productDetails:  Laptop
   quantity:        3
   shippingAddress: 123 Print St. San Jose
@@ -18,24 +18,18 @@ root:
         arguments:
           - orderId
           - customerId
-     - parallel:
-          branches:
-            - sequence:
-                elements:
-                 - activity:
-                    name: PrepareShipping
-                    arguments:
-                      - orderId
-                      - shippingAddress
-            - sequence:
-                elements:
-                 - activity:
-                    name: GenerateInvoice
-                    arguments:
-                      - orderId
-                    result: invoiceId
      - activity:
-        name: NotifyShipment
+        name: PrepareShipping
         arguments:
           - orderId
-          - invoiceId
+          - shippingAddress
+     - activity:
+         name: GenerateInvoice
+         arguments:
+           - orderId
+         result: invoiceId
+     - activity:
+         name: NotifyShipment
+         arguments:
+           - orderId
+           - invoiceId

@@ -84,7 +84,7 @@ func (a *Activities) HumanApprovement(ctx context.Context, input []string) (stri
 func checkInventoryService(stem string, orderId string, quantity string) (string, error) {
 	base := "http://localhost:9999/" + stem + "?orderId=%s&quantity=%s"
 	url := fmt.Sprintf(base, url.QueryEscape(orderId), url.QueryEscape(quantity))
-	time.Sleep(10 * time.Second)
+	time.Sleep(5 * time.Second)
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err
@@ -106,7 +106,7 @@ func checkInventoryService(stem string, orderId string, quantity string) (string
 func prepareShippingService(stem string, orderId string, shippingAddress string) error {
 	base := "http://localhost:9999/" + stem + "?orderId=%s&shippingAddress=%s"
 	url := fmt.Sprintf(base, url.QueryEscape(orderId), url.QueryEscape(shippingAddress))
-	time.Sleep(10 * time.Second)
+	time.Sleep(6 * time.Second)
 	resp, err := http.Get(url)
 	if err != nil {
 		return err
@@ -128,7 +128,7 @@ func prepareShippingService(stem string, orderId string, shippingAddress string)
 func sendConfirmationService(stem string, orderId string, customerId string) (string, error) {
 	base := "http://localhost:9999/" + stem + "?orderId=%s&customerId=%s"
 	url := fmt.Sprintf(base, url.QueryEscape(orderId), url.QueryEscape(customerId))
-	time.Sleep(10 * time.Second)
+	time.Sleep(4 * time.Second)
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err
@@ -150,7 +150,7 @@ func sendConfirmationService(stem string, orderId string, customerId string) (st
 func generateInvoiceService(stem string, orderId string) (string, error) {
 	base := "http://localhost:9999/" + stem + "?orderId=%s"
 	url := fmt.Sprintf(base, url.QueryEscape(orderId))
-	time.Sleep(40 * time.Second)
+	time.Sleep(15 * time.Second)
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err
@@ -172,7 +172,7 @@ func generateInvoiceService(stem string, orderId string) (string, error) {
 func notifyShipmentService(stem string, orderId string, invoiceId string) error {
 	base := "http://localhost:9999/" + stem + "?orderId=%s&invoiceId=%s"
 	url := fmt.Sprintf(base, url.QueryEscape(orderId), url.QueryEscape(invoiceId))
-	time.Sleep(10 * time.Second)
+	time.Sleep(7 * time.Second)
 	resp, err := http.Get(url)
 	if err != nil {
 		return err
