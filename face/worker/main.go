@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	workflow "temporal-go/basic-workflow"
+	workflow "temporal-go/face"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
