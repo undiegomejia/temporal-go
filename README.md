@@ -1,3 +1,5 @@
+`(!)` This project was possible thanks to the efforts of the Temporal.io Github Repo [Temporal Samples Go](https://github.com/temporalio/samples-go) repo. Thanks. `(!)`
+
 # Different Workflows case uses with Temporal.io  
 
 This project demonstrates several ways to display workflows using Temporal.io with Go SDK
