@@ -116,7 +116,7 @@ func sendConfirmationService(stem string, orderId string, customerId string) (bo
 func generateInvoiceService(stem string, orderId string) (string, error) {
 	base := "http://localhost:9999/" + stem + "?orderId=%s"
 	url := fmt.Sprintf(base, url.QueryEscape(orderId))
-	time.Sleep(10 * time.Second)
+	time.Sleep(18 * time.Second)
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err
