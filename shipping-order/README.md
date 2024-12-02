@@ -50,12 +50,12 @@ go run main.go
 
 ### 3. Run the Microservice
 
-The microservice is located in the `microservice` directory. It provides two HTTP endpoints fo facial feature processing.
+The microservice is located in the `http` directory. It provides two HTTP endpoints fo facial feature processing.
 
-1. Navigate to the `microservice` directory:
+1. Navigate to the `http` directory:
 
 ```bash
-cd ../microservice
+cd ../http
 ```
 
 2. Start the microservice by running the `main.go` file:
@@ -106,7 +106,7 @@ go run main.go
 #### Project Structure
 
 * `worker`: Contains the worker code ready to execute workflows.
-* `microservice`: Contains the HTTP microservice.
+* `http`: Contains the HTTP microservice.
 * `starter`: Contains the starter code ready to execute.
 
 ---
