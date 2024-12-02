@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"log"
-	orders "temporal-go/orders"
+	orders "temporal-go/shipping-order"
 
 	"github.com/google/uuid"
 	"go.temporal.io/sdk/client"

@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	orders "temporal-go/orders"
+	orders "temporal-go/shipping-order"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"

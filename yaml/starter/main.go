@@ -5,7 +5,7 @@ import (
 	"flag"
 	"log"
 	"os"
-	dsl "temporal-go/dsl"
+	dsl "temporal-go/yaml"
 
 	"github.com/google/uuid"
 	"go.temporal.io/sdk/client"

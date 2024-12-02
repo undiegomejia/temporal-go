@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	dsl "temporal-go/dsl"
+	dsl "temporal-go/yaml"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"

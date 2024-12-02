@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 	"os"
-	workflow "temporal-go/basic-workflow"
+	workflow "temporal-go/face"
 
 	"go.temporal.io/sdk/client"
 )
