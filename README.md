@@ -1,4 +1,4 @@
-`(!)` This repo was possible thanks to the efforts of the Temporal.io Github Team who created an amazing guide in [Temporal Samples Go](https://github.com/temporalio/samples-go).
+`(!)` This repository was made possible through the efforts of the  Temporal.io Github Team who created an amazing guide on [Temporal Samples Go](https://github.com/temporalio/samples-go).
 
 # Different Workflows case uses with Temporal.io  
 
