@@ -1,3 +1,5 @@
+`(!)` Based on [Temporal.io Samples Go Dsl](https://github.com/temporalio/samples-go/tree/main/dsl) repository
+
 This sample demonstrates how to implement a DSL workflow. In this sample, we provide 2 sample yaml files each defines a custom workflow that can be processed by this DSL workflow sample code.
 
 Steps to run this sample:
